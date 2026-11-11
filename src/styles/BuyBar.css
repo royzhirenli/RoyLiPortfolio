@@ -1,0 +1,30 @@
+.buybar {
+  position: fixed;
+  /* Center with left/right 0 + margin auto, NOT a CSS transform: the slide-in
+     animation uses transform itself and would erase a transform-based centering. */
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  bottom: 16px;
+  width: min(720px, calc(100% - 24px));
+  z-index: 90;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 10px 12px 10px 24px;
+  border-radius: 980px;
+  background: rgba(28, 28, 30, 0.8);
+  backdrop-filter: saturate(180%) blur(20px);
+  -webkit-backdrop-filter: saturate(180%) blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+}
+.buybar-text span { color: var(--text-dim); }
+.buybar-buttons { display: flex; gap: 8px; }
+.buybar .btn { padding: 8px 18px; font-size: 0.9rem; }
+
+/* On phones: hide the sentence, keep the buttons. */
+@media (max-width: 600px) {
+  .buybar { padding: 8px; justify-content: center; }
+  .buybar-text { display: none; }
+}

@@ -1,0 +1,21 @@
+.specs { border-top: 1px solid var(--line); }
+.specs-title { font-size: clamp(2.5rem, 7vw, 5rem); font-weight: 700; letter-spacing: -0.03em; margin-bottom: 40px; }
+
+.spec-group { margin-bottom: 48px; }
+.spec-group-title { font-size: 1.5rem; padding-bottom: 12px; border-bottom: 1px solid var(--text-dim); }
+
+.spec-rows { margin: 0; }
+/* Each row: label on the left, value on the right, thin line between rows. */
+.spec-row {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 24px;
+  padding: 16px 0;
+  border-bottom: 1px solid var(--line);
+}
+.spec-row dt { color: var(--text-dim); }
+.spec-row dd { margin: 0; }
+
+@media (max-width: 600px) {
+  .spec-row { grid-template-columns: 1fr; gap: 4px; }
+}

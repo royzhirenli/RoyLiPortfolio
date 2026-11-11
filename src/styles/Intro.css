@@ -1,0 +1,12 @@
+.intro { text-align: center; }
+
+.intro-line {
+  font-size: clamp(2rem, 6vw, 4.2rem);
+  font-weight: 700;
+  line-height: 1.1;
+  letter-spacing: -0.02em;
+  color: var(--text);
+  margin-bottom: 12px;
+}
+/* Make every line after the first look dimmer for a nice rhythm. */
+.intro-line:not(:first-child) { color: var(--text-dim); }

@@ -1,0 +1,123 @@
+/* ============================================================
+   GLOBAL STYLES: apply to the whole site.
+   The :root block holds "CSS variables". Change a color here
+   and it changes everywhere it is used via var(--name).
+
+   PERSONALIZE:
+   - Want a different accent color? Change --blue (buttons, links, glow).
+   - Want a different page background? Change --bg (try #0b0b1a for deep navy).
+   - Colors are hex codes like #2997ff. Search "color picker" to find one.
+   - The rainbow headline text is the .gradient-text rule further down:
+     swap the three colors in that linear-gradient line.
+   - Want bigger/smaller text? Look for font-size lines. "clamp(min, ideal, max)"
+     means: never smaller than min, never bigger than max, scale in between.
+   ============================================================ */
+:root {
+  --bg: #000000;
+  --bg-soft: #111113;
+  --text: #f5f5f7;
+  --text-dim: #86868b;
+  --line: #2a2a2d;
+  --blue: #2997ff;
+  --purple: #bf5af2;
+  --orange: #ff9f0a;
+  --max-width: 1080px;
+  --nav-height: 48px;
+  /* System font stack: uses the device's own nice font. No Apple fonts bundled. */
+  --font: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+}
+
+/* Make width calculations predictable and remove default margins. */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth; /* clicking a nav link glides instead of jumping */
+}
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font-family: var(--font);
+  -webkit-font-smoothing: antialiased;
+  overflow-x: hidden; /* never allow sideways scrolling */
+}
+
+h1, h2, h3, p { margin: 0; }
+
+a { color: inherit; text-decoration: none; }
+
+/* A centered column that most sections put their content in. */
+.container {
+  width: 100%;
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+/* Every full section gets the same vertical breathing room. */
+.section {
+  padding: 120px 0;
+}
+
+/* Small uppercase label above a headline, e.g. "BRAINS". */
+.eyebrow {
+  color: var(--orange);
+  font-size: 1.1rem;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  margin-bottom: 12px;
+}
+
+/* The big gradient text effect used on headlines. */
+.gradient-text {
+  background: linear-gradient(90deg, #2997ff, #bf5af2 50%, #ff9f0a);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+/* Buttons: .btn is the shape, .btn-primary is the blue one. */
+.btn {
+  display: inline-block;
+  padding: 12px 24px;
+  border-radius: 980px;
+  font-size: 1rem;
+  font-weight: 500;
+  border: 1px solid var(--blue);
+  color: var(--blue);
+  transition: background 0.2s, color 0.2s;
+}
+.btn:hover { background: rgba(41, 151, 255, 0.15); }
+.btn-primary { background: var(--blue); color: #fff; }
+.btn-primary:hover { background: #0a84ff; }
+
+/* Keyboard users see a clear outline when tabbing through links. */
+:focus-visible {
+  outline: 3px solid var(--blue);
+  outline-offset: 3px;
+}
+
+/* Text for screen readers only (invisible on screen). */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
+}
+
+/* Smaller screens (phones): less padding. */
+@media (max-width: 700px) {
+  .section { padding: 80px 0; }
+}
+
+/* If the visitor asked their device for less motion, turn off smooth scrolling. */
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+}

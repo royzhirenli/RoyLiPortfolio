@@ -1,0 +1,48 @@
+/* The TALL outer box. Its height is the "scroll distance" the fade plays across.
+   Taller = slower fade. Shorter = faster. */
+.portrait {
+  height: 250vh;
+  position: relative;
+}
+
+/* This box stays stuck to the screen while we scroll through the tall section. */
+.portrait-sticky {
+  position: sticky;
+  top: 0;
+  height: 100vh;
+  display: flex;
+  align-items: center; /* centers the photo vertically */
+  justify-content: center;
+  padding: 0 24px;
+}
+
+/* Used only when the visitor prefers reduced motion (no pinning). */
+.portrait-static {
+  padding: 100px 24px;
+  display: flex;
+  justify-content: center;
+}
+
+/* figure is the HTML tag for "an image with a caption". */
+.portrait-figure {
+  margin: 0;
+  width: min(420px, 100%);
+  text-align: center;
+}
+
+.portrait-img {
+  display: block;
+  width: 100%;
+  aspect-ratio: 4 / 5; /* keeps a tall portrait shape whatever photo you use */
+  object-fit: cover; /* crops the photo to fill the frame instead of squishing it */
+  border-radius: 32px;
+  box-shadow: 0 30px 100px rgba(41, 151, 255, 0.25);
+}
+
+.portrait-caption {
+  margin-top: 24px;
+  color: var(--text);
+  font-size: clamp(1.2rem, 3vw, 1.6rem);
+  font-weight: 600;
+  letter-spacing: -0.01em;
+}

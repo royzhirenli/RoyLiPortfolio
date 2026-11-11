@@ -1,0 +1,76 @@
+/* The TALL outer box. Its height is what gives us "scroll distance" for the animation. */
+.phone-section {
+  height: 400vh;
+  position: relative;
+}
+
+/* The box that stays stuck to the screen while we scroll through the tall section. */
+.phone-sticky {
+  position: sticky;
+  top: 0;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.phone-title {
+  font-size: clamp(2.5rem, 8vw, 5.5rem);
+  font-weight: 700;
+  letter-spacing: -0.03em;
+  text-align: center;
+}
+.phone-title-abs { position: absolute; top: 18%; left: 0; right: 0; padding: 0 24px; }
+
+.phone-stage { perspective: 1200px; } /* gives the tilt a 3D feel */
+
+/* The phone body, drawn with plain CSS. */
+.phone {
+  width: min(300px, 70vw);
+  aspect-ratio: 9 / 19;
+  border-radius: 44px;
+  background: #1c1c1e;
+  border: 3px solid #3a3a3c;
+  padding: 10px;
+  position: relative;
+  box-shadow: 0 40px 120px rgba(41, 151, 255, 0.25);
+  transform-origin: center bottom;
+}
+
+.phone-notch {
+  position: absolute;
+  top: 18px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 90px;
+  height: 26px;
+  border-radius: 20px;
+  background: #000;
+  z-index: 2;
+}
+
+.phone-screen {
+  width: 100%;
+  height: 100%;
+  border-radius: 34px;
+  overflow: hidden;
+  display: flex;
+  align-items: flex-end;
+  transition: background 0.5s;
+}
+
+.phone-content { padding: 28px 22px; width: 100%; }
+.phone-content h3 { font-size: 1.8rem; line-height: 1.1; margin: 6px 0 10px; }
+.phone-tag { font-size: 0.85rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.08em; opacity: 0.85; }
+.phone-blurb { font-size: 0.95rem; line-height: 1.4; opacity: 0.85; }
+
+.phone-dots { display: flex; gap: 6px; margin-top: 18px; }
+.dot { width: 6px; height: 6px; border-radius: 50%; background: rgba(255, 255, 255, 0.35); }
+.dot.active { background: #fff; width: 18px; border-radius: 4px; }
+
+/* Fallback list used when the visitor prefers reduced motion. */
+.phone-static { display: grid; gap: 20px; margin-top: 40px; }
+.phone-static-card { border: 1px solid; border-radius: 20px; padding: 28px; background: var(--bg-soft); }
+.phone-static-card h3 { font-size: 1.6rem; margin: 6px 0 10px; }
+.phone-static-card p:last-child { color: var(--text-dim); }

@@ -1,0 +1,9 @@
+.footer {
+  background: var(--bg-soft);
+  padding: 48px 0 120px; /* extra bottom space so the BuyBar never covers the text */
+  color: var(--text-dim);
+  font-size: 0.8rem;
+  line-height: 1.6;
+}
+.footer p { margin-bottom: 8px; }
+.footer-copy { margin-top: 24px; border-top: 1px solid var(--line); padding-top: 16px; }

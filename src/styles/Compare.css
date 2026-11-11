@@ -1,0 +1,19 @@
+.compare { border-top: 1px solid var(--line); }
+.compare-title { font-size: clamp(2.5rem, 7vw, 5rem); font-weight: 700; letter-spacing: -0.03em; margin-bottom: 40px; text-align: center; }
+
+/* Two cards side by side. */
+.compare-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; }
+
+.compare-card { background: var(--bg-soft); border: 1px solid var(--line); border-radius: 24px; padding: 32px; height: 100%; }
+.compare-card.highlight { border-color: var(--blue); box-shadow: 0 0 60px rgba(41, 151, 255, 0.15); }
+.compare-card h3 { font-size: 1.6rem; margin-bottom: 24px; }
+.compare-card ul { list-style: none; margin: 0; padding: 0; }
+.compare-card li { display: flex; gap: 14px; padding: 12px 0; border-top: 1px solid var(--line); }
+
+.yes { color: #30d158; font-weight: 700; width: 1.2em; }
+.no { color: var(--text-dim); width: 1.2em; }
+
+/* Stack the cards on phones. */
+@media (max-width: 700px) {
+  .compare-grid { grid-template-columns: 1fr; }
+}

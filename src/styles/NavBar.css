@@ -1,0 +1,39 @@
+/* position: fixed keeps the bar glued to the top while you scroll. */
+.nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: var(--nav-height);
+  z-index: 100;
+  background: rgba(0, 0, 0, 0.7);
+  /* backdrop-filter blurs whatever is behind the bar: the "frosted glass" look. */
+  backdrop-filter: saturate(180%) blur(20px);
+  -webkit-backdrop-filter: saturate(180%) blur(20px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.nav-inner {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.nav-logo { font-weight: 600; font-size: 0.95rem; }
+
+.nav-links {
+  display: flex;
+  gap: 28px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  font-size: 0.8rem;
+  color: var(--text-dim);
+}
+.nav-links a:hover { color: var(--text); }
+
+/* On phones, hide the links to keep the bar tidy. */
+@media (max-width: 700px) {
+  .nav-links { display: none; }
+}
