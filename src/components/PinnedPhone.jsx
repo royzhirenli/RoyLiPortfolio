@@ -6,7 +6,8 @@
 //   3. We measure how far you've scrolled through the tall section (progress, 0 to 1)
 //      and use that number to animate the phone and swap the project on its screen.
 import { useRef, useState } from 'react'
-import { motion, useScroll, useTransform, useMotionValueEvent, useReducedMotion } from 'framer-motion'
+import { motion, useScroll, useTransform, useMotionValueEvent } from 'framer-motion'
+import useReducedMotion from './useReducedMotion.js'
 import content from '../data/content.js'
 import { pickProjectIndex } from './pickProject.js'
 import '../styles/PinnedPhone.css'

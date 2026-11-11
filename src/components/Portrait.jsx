@@ -5,7 +5,8 @@
 //   - Scroll up:   the exact same fade plays backwards -> back to the blank screen.
 // Same trick as the phone scene: a tall section with a "sticky" screen inside it.
 import { useRef } from 'react'
-import { motion, useScroll, useTransform, useReducedMotion } from 'framer-motion'
+import { motion, useScroll, useTransform } from 'framer-motion'
+import useReducedMotion from './useReducedMotion.js'
 import content from '../data/content.js'
 import '../styles/Portrait.css'
 

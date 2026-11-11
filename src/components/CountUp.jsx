@@ -1,6 +1,7 @@
 // CountUp: a number that counts from 0 up to "to" when it scrolls into view.
 import { useEffect, useRef, useState } from 'react'
-import { animate, useInView, useReducedMotion } from 'framer-motion'
+import { animate, useInView } from 'framer-motion'
+import useReducedMotion from './useReducedMotion.js'
 
 export default function CountUp({ to, suffix = '' }) {
   const ref = useRef(null)

@@ -1,6 +1,7 @@
 // Reveal: wrap anything in <Reveal> and it fades + slides up when scrolled into view.
 // We use it everywhere so the page feels alive without repeating code.
-import { motion, useReducedMotion } from 'framer-motion'
+import { motion } from 'framer-motion'
+import useReducedMotion from './useReducedMotion.js'
 
 // "children" is whatever you put between <Reveal> and </Reveal>.
 // "delay" lets you stagger several items (0.1, 0.2, ...).

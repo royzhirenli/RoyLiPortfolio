@@ -30,7 +30,7 @@
 
 const content = {
   // Your identity. Used in the nav bar, hero, and footer.
-  name: 'Roy Zhiren Li',
+  name: 'Roy Zhiren Li presents...',
   productName: 'Roy Pro Max',
   tagline: 'Hire different.',
   subtitle: 'Biomedical Engineering Student at the University of Waterloo. Scroll down to learn more about me!',
@@ -41,6 +41,13 @@ const content = {
     resume: '#',
     email: 'mailto:royzhirenli@gmail.com',
   },
+
+  // Animations on/off for people who turned on "Reduce Motion" on their device
+  // (iPhone: Settings > Accessibility > Motion).
+  //   false = everyone sees the fade-ins, the pinned phone, and the portrait fade.
+  //   true  = those visitors get a calm, static version instead (kinder to people who
+  //           get dizzy from motion, but your effects won't show on their device).
+  respectReducedMotion: false,
 
   // Your photo, shown between the hero and the intro text.
   // To swap it: put your picture in the "public" folder (e.g. public/roy.jpg)
