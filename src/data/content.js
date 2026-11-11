@@ -55,9 +55,9 @@ const content = {
 
   // The big statement that fades in under the hero.
   intro: [
-    'Lorem ipsum dolor sit amet.',
-    'Consectetur adipiscing elit.',
-    'Sed do eiusmod tempor.',
+    'Hi! My name is Roy',
+    'I love building projects, memories, and communities.',
+    '.',
   ],
 
   // Projects shown inside the pinned phone. Add or remove items freely.
@@ -65,7 +65,7 @@ const content = {
     { title: 'Project One', tag: 'Biomedical', blurb: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.', color: '#2997ff' },
     { title: 'Project Two', tag: 'Software', blurb: 'Sed do eiusmod tempor incididunt ut labore et dolore.', color: '#bf5af2' },
     { title: 'Project Three', tag: 'Hardware', blurb: 'Ut enim ad minim veniam, quis nostrud exercitation.', color: '#30d158' },
-    { title: 'Project Four', tag: 'Research', blurb: 'Duis aute irure dolor in reprehenderit in voluptate.', color: '#ff9f0a' },
+    { title: '@royatloo', tag: 'Instagram', blurb: 'Connected 500+ followers through.', color: '#ff9f0a' },
   ],
 
   // The three big feature sections. "stat" is the number that counts up.
