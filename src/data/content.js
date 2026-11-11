@@ -44,9 +44,11 @@ const content = {
 
   // Your photo, shown between the hero and the intro text.
   // To swap it: put your picture in the "public" folder (e.g. public/roy.jpg)
-  // and change src to '/roy.jpg'. Describe the photo in "alt" for screen readers.
+  // and change the file name below to 'roy.jpg'. Keep the `${import.meta.env.BASE_URL}`
+  // part: it makes the photo load correctly on GitHub Pages too.
+  // Describe the photo in "alt" for screen readers.
   portrait: {
-    src: '/portrait-placeholder.svg',
+    src: `${import.meta.env.BASE_URL}portrait-placeholder.svg`,
     alt: 'Portrait of Roy Zhiren Li',
     caption: 'The product.',
   },
