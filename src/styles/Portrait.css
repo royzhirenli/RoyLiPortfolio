@@ -26,7 +26,8 @@
 /* figure is the HTML tag for "an image with a caption". */
 .portrait-figure {
   margin: 0;
-  width: min(420px, 100%);
+  /* The photo's max width. Smaller number = smaller photo (was 420px). */
+  width: min(260px, 100%);
   text-align: center;
 }
 

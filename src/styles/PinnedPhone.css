@@ -13,6 +13,11 @@
   align-items: center;
   justify-content: center;
   overflow: hidden;
+  /* Padding shrinks the area the phone is centered in, which moves it UP.
+     Top: clears the nav bar. Bottom (110px): reserves room for the floating
+     "Hire Roy" bar so it never covers the phone's text. Raise the bottom number
+     to lift the phone more, lower it to bring the phone down. */
+  padding: var(--nav-height) 0 110px;
 }
 
 .phone-title {
@@ -27,8 +32,14 @@
 
 /* The phone body, drawn with plain CSS. */
 .phone {
-  width: min(300px, 70vw);
-  aspect-ratio: 9 / 19;
+  /* Width is the smallest of three limits:
+       310px            -> the widest the phone gets
+       78vw             -> never wider than 78% of the screen
+       the calc() one   -> never taller than the space above the Hire bar,
+                           so it also fits on short laptop screens.
+     To make the phone bigger or smaller, change the 310px. */
+  width: min(310px, 78vw, calc((100vh - var(--nav-height) - 150px) * 9 / 17));
+  aspect-ratio: 9 / 17; /* width : height. A smaller second number = a wider, stubbier phone. */
   border-radius: 44px;
   background: #1c1c1e;
   border: 3px solid #3a3a3c;

@@ -33,13 +33,13 @@ const content = {
   name: 'Roy Zhiren Li',
   productName: 'Roy Pro Max',
   tagline: 'Hire different.',
-  subtitle: 'Biomedical. Software. Hardware. Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
+  subtitle: 'Biomedical Engineering Student at the University of Waterloo. Scroll down to learn more about me!',
 
   // Links for the buttons. Replace '#' with real links, e.g. 'mailto:you@email.com'.
   links: {
     hire: 'mailto:roy@example.com',
     resume: '#',
-    email: 'mailto:roy@example.com',
+    email: 'mailto:royzhirenli@gmail.com',
   },
 
   // Your photo, shown between the hero and the intro text.
@@ -117,9 +117,9 @@ const content = {
 
   // Tiny fine print at the bottom. The last one is the legal disclaimer.
   footnotes: [
-    '* Requires coffee. Not waterproof.',
-    '** Lorem ipsum results may vary.',
-    'Roy Pro Max is a parody. Not affiliated with, endorsed by, or sponsored by Apple Inc.',
+    '* Requires iced tea. VERY waterproof.',
+    '** Results may vary.',
+    'Roy Pro Max is a parody. Roy Zhiren Li is NOT affiliated with, endorsed by, or sponsored by Apple Inc (yet).',
   ],
 }
 
