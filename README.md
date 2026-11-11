@@ -1,7 +1,7 @@
 # Roy Pro Max: Roy Zhiren Li's portfolio
 
 A parody product-launch page where Roy is the product. Built with React, Vite, and Framer Motion.
-Parody only. Not affiliated with Apple.
+Parody only. Not affiliated with Apple. so yeah
 
 ## Run it
 
