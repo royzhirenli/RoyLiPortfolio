@@ -65,7 +65,7 @@ export default function PinnedPhone() {
       <div className="phone-sticky">
         {/* Headline that fades out as the phone appears. */}
         <motion.h2 className="phone-title phone-title-abs" style={{ opacity: titleOpacity }}>
-          Meet the <span className="gradient-text">projects.</span>
+          Ah yes, my favourite <span className="gradient-text">projects.</span>
         </motion.h2>
 
         {/* perspective on the parent gives the rotateX a 3D look. */}
